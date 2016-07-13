@@ -1,0 +1,7 @@
+problem description (paraphrased from google's):
+
+a company has a known number of levels of supervision x, i.e. the number of steps in the chain of command, and each individual employee may have a maximum of 7 employees under their supervision. each employee has one supervisor. there is one "CEO" at the top of the hierarchy. write a function which is given the number of levels of supervision, x, as a parameter and returns the maximum possible number of employees. for example, if given 1 it should return 8, because with one level of supervision there is the CEO and his (max) 7 employees. if given 2, the function should return 57 - the CEO (+1), his seven employees (+7), and their 7 employees each (+49) --  1 + 7 + 49 = 57.
+
+test case will be a positive integer between 1 and 10 
+
+
