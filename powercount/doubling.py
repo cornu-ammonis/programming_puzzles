@@ -1,19 +1,23 @@
-from math import pow
-import datetime
-
-def max_employees(x):
-	n = 0
-	while (x > 0):
-		n  = n + pow(7, x)
-		x = x -1
-	return n + 1
+import datetime 
 
 
-#test cases. 1 should return 8, 2 should return 57
+def recur(n):
+	y = int(n/2)
+	if y > 0:
+		return y + recur(y)
+	else:
+		return 0
+
+
+def countHighestPower(N):
+	n = int(N)
+
+	return str(recur(n))
+
 
 def time(N):
 	before = datetime.datetime.now()
-	ans = max_employees(N)
+	ans = countHighestPower(N)
 	after = datetime.datetime.now()
 	print ans
 	return (after - before)
@@ -28,6 +32,7 @@ def doubling(N):
 		print s 
 		prev = t
 
-doubling(1)
+doubling(10000000000)
 		
+
 

@@ -1,3 +1,4 @@
+import datetime
 def max_employees(x):
 	if x < 0 :
 		return 0
@@ -7,12 +8,24 @@ def max_employees(x):
 		n = max_employees(x-1)
 		return (7*(n-max_employees(x-2)) + n)
 
-#test cases. 1 should return 8, 2 should return 57
+def time(N):
+	before = datetime.datetime.now()
+	ans = max_employees(N)
+	after = datetime.datetime.now()
+	print ans
+	return (after - before)
 
 
-#result = max_employees(1)
-#print(result)
-#result = max_employees(2)
-#print(result)
+def doubling(N):
+	prev = time(N)
+	while(N < 100):
+		N = N * 2
+		t = time(N)
+		s = "{0} {1} {2}\n".format(N, t, t.total_seconds()/prev.total_seconds())
+		print s 
+		prev = t
+
+doubling(1)
+		
 
 

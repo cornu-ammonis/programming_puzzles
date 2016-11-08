@@ -1,0 +1,2 @@
+mag = raw_input("input test")
+print(type(mag))
